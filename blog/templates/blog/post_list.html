@@ -6,10 +6,19 @@
 
 <body>
 <div>
-    <h1>안녕하세요!</h1>
-    <h2>이하경입니다</h2>
+    <h1>☆우주최강깜쯱기여미 하경이☆</h1>
+    <h2>스시.파스타.피자.만두.탕수육.유산슬.짬뽕.비빔밥.육회.대하.대게.조개구이.스테이크.양꼬치.곱창전골.뿌신다.</h2>
+    <p>뿌신다.</p>
+    <p>수현아 보고있니.</p>
+    {{ post }}
 </div>
-<p>Hi there!</p>
-<p>It works!</p>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date  }}</p>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{%endfor %}
 </body>
 </html>
